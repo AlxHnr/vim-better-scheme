@@ -30,4 +30,5 @@ if exists('b:is_chicken') || exists('is_chicken')
 endif
 
 " Custom stuff.
-syntax keyword schemeExtSyntax f-module f-import function
+syntax keyword schemeSyntax function
+syntax keyword schemeExtSyntax f-module f-import
