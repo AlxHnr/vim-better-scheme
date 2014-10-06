@@ -21,7 +21,7 @@
 " }}}
 
 if exists('b:is_chicken') || exists('is_chicken')
-	setlocal lispwords+=module,define-compiler-syntax
+	setlocal lispwords+=module,define-compiler-syntax,define-for-syntax
 endif
 
 " Custom stuff.

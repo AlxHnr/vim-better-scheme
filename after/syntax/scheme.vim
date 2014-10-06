@@ -21,8 +21,11 @@
 " }}}
 
 if exists('b:is_chicken') || exists('is_chicken')
-	syntax keyword schemeExtSyntax import export module include use
-	syntax keyword schemeExtSyntax : -> begin-syntax define-compiler-syntax
+	syntax keyword schemeExtSyntax import export module include use : ->
+	syntax keyword schemeExtSyntax begin-for-syntax define-compiler-syntax
+	syntax keyword schemeExtSyntax define-for-syntax
+	syntax keyword schemeExtSyntax er-macro-transformer ir-macro-transformer
+	syntax keyword schemeExtSyntax string-translate string-translate*
 endif
 
 " Custom stuff.
