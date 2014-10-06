@@ -20,13 +20,9 @@
 "       distribution.
 " }}}
 
-if exists('b:loaded_vim_better_scheme')
-	finish
-endif
-let b:loaded_vim_better_scheme = 1
-
 if exists('b:is_chicken') || exists('is_chicken')
-	syntax keyword schemeExtSyntax module import use define-compiler-syntax
+	syntax keyword schemeExtSyntax import export module include use
+	syntax keyword schemeExtSyntax : -> begin-syntax define-compiler-syntax
 endif
 
 " Custom stuff.
