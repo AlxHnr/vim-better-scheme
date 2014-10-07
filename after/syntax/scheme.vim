@@ -30,4 +30,5 @@ endif
 
 " Custom stuff.
 syntax keyword schemeSyntax function
-syntax keyword schemeExtSyntax f-module f-import
+syntax keyword schemeExtSyntax test test-begin test-end test-exit
+syntax keyword schemeExtSyntax f-program f-module f-import
