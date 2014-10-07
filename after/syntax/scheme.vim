@@ -23,12 +23,14 @@
 if exists('b:is_chicken') || exists('is_chicken')
 	syntax keyword schemeExtSyntax import export module include use : ->
 	syntax keyword schemeExtSyntax begin-for-syntax define-compiler-syntax
-	syntax keyword schemeExtSyntax define-for-syntax
+	syntax keyword schemeExtSyntax define-for-syntax unless when
 	syntax keyword schemeExtSyntax er-macro-transformer ir-macro-transformer
 	syntax keyword schemeExtSyntax string-translate string-translate*
+	syntax region ChickenC matchgroup=Constant start=/#${/ end=/}/
 endif
 
 " Custom stuff.
 syntax keyword schemeSyntax function
 syntax keyword schemeExtSyntax test test-begin test-end test-exit
+syntax keyword schemeExtSyntax test-group test-assert
 syntax keyword schemeExtSyntax f-program f-module f-import
