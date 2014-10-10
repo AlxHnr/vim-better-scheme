@@ -23,7 +23,7 @@
 if exists('b:is_chicken') || exists('is_chicken')
 	syntax keyword schemeExtSyntax import export module include use : ->
 	syntax keyword schemeExtSyntax begin-for-syntax define-compiler-syntax
-	syntax keyword schemeExtSyntax define-for-syntax unless when
+	syntax keyword schemeExtSyntax define-for-syntax unless when exit
 	syntax keyword schemeExtSyntax er-macro-transformer ir-macro-transformer
 	syntax keyword schemeExtSyntax string-translate string-translate*
 	syntax region ChickenC matchgroup=Constant start=/#${/ end=/}/
@@ -33,4 +33,21 @@ endif
 syntax keyword schemeSyntax function
 syntax keyword schemeExtSyntax test test-begin test-end test-exit
 syntax keyword schemeExtSyntax test-group test-assert
-syntax keyword schemeExtSyntax f-program f-module f-import
+syntax keyword schemeExtSyntax f-program f-module f-test f-import
+
+syntax keyword schemeSyntax make-hash-table alist->hash-table
+syntax keyword schemeSyntax hash-table-equivalence-function hash-table?
+syntax keyword schemeSyntax hash-table-hash-function hash-table-min-load
+syntax keyword schemeSyntax hash-table-max-load hash-table-weak-keys
+syntax keyword schemeSyntax hash-table-has-initial? hash-table-initial
+syntax keyword schemeSyntax hash-table-keys hash-table-values
+syntax keyword schemeSyntax hash-table->alist hash-table-ref
+syntax keyword schemeSyntax hash-table-ref/default hash-table-exists?
+syntax keyword schemeSyntax hash-table-set! hash-table-update!
+syntax keyword schemeSyntax hash-table-update!/default hash-table-copy
+syntax keyword schemeSyntax hash-table-delete! hash-table-remove!
+syntax keyword schemeSyntax hash-table-clear! hash-table-merge
+syntax keyword schemeSyntax hash-table-merge! hash-table-map
+syntax keyword schemeSyntax hash-table-fold hash-table-for-each
+syntax keyword schemeSyntax hash-table-size hash-table-walk
+syntax keyword schemeSyntax hash-table-weak-values

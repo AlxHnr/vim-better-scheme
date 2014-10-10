@@ -25,5 +25,8 @@ if exists('b:is_chicken') || exists('is_chicken')
 endif
 
 " Custom stuff.
-setlocal lispwords+=test,test-group,test-assert
-setlocal lispwords+=f-program,f-module,function
+setlocal lispwords+=define-values
+setlocal lispwords+=call-with-input-file,call-with-output-file
+setlocal lispwords+=test,test-group,test-assert,test-error
+setlocal lispwords+=f-program,f-module,f-test,function
+setlocal lispwords+=hash-table-for-each,hash-table-walk
