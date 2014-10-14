@@ -26,14 +26,16 @@ if exists('b:is_chicken') || exists('is_chicken')
 	syntax keyword schemeExtSyntax define-for-syntax unless when exit
 	syntax keyword schemeExtSyntax er-macro-transformer ir-macro-transformer
 	syntax keyword schemeExtSyntax string-translate string-translate*
+	syntax keyword schemeExtSyntax define-values
 	syntax region ChickenC matchgroup=Constant start=/#${/ end=/}/
 endif
 
-" Custom stuff.
-syntax keyword schemeSyntax function
+syn region schemeStruc matchgroup=Delimiter start="("
+	\	matchgroup=Delimiter end=")" contains=ALL fold
+
+syntax keyword schemeSyntax fold find
 syntax keyword schemeExtSyntax test test-begin test-end test-exit
 syntax keyword schemeExtSyntax test-group test-assert
-syntax keyword schemeExtSyntax f-program f-module f-test f-import
 
 syntax keyword schemeSyntax make-hash-table alist->hash-table
 syntax keyword schemeSyntax hash-table-equivalence-function hash-table?
@@ -51,3 +53,7 @@ syntax keyword schemeSyntax hash-table-merge! hash-table-map
 syntax keyword schemeSyntax hash-table-fold hash-table-for-each
 syntax keyword schemeSyntax hash-table-size hash-table-walk
 syntax keyword schemeSyntax hash-table-weak-values
+
+" Custom stuff.
+syntax keyword schemeSyntax function
+syntax keyword schemeExtSyntax f-program f-module f-test f-import
