@@ -1,4 +1,4 @@
-# Better Scheme
+# Vim Better Scheme
 
 This plugin complements Vim's default syntax files for scheme. It adds
 rules for folding, more lispwords and highlights extra keywords.
