@@ -53,7 +53,3 @@ syntax keyword schemeSyntax hash-table-merge! hash-table-map
 syntax keyword schemeSyntax hash-table-fold hash-table-for-each
 syntax keyword schemeSyntax hash-table-size hash-table-walk
 syntax keyword schemeSyntax hash-table-weak-values
-
-" Custom stuff.
-syntax keyword schemeSyntax function
-syntax keyword schemeExtSyntax f-program f-module f-test f-import
