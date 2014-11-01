@@ -28,6 +28,10 @@ if exists('b:is_chicken') || exists('is_chicken')
 	syntax keyword schemeExtSyntax string-translate string-translate*
 	syntax keyword schemeExtSyntax define-values
 	syntax region ChickenC matchgroup=Constant start=/#${/ end=/}/
+
+	" chicken-bundle.
+	syntax keyword schemeSyntax function
+	syntax keyword schemeExtSyntax ch-module ch-program ch-test ch-import
 endif
 
 syn region schemeStruc matchgroup=Delimiter start="("

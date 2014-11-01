@@ -22,9 +22,11 @@
 
 if exists('b:is_chicken') || exists('is_chicken')
 	setlocal lispwords+=module,define-compiler-syntax,define-for-syntax
+
+	" chicken-bundle.
+	setlocal lispwords+=function,ch-module,ch-test
 endif
 
-" Custom stuff.
 setlocal lispwords+=define-values
 setlocal lispwords+=call-with-input-file,call-with-output-file
 setlocal lispwords+=test,test-group,test-assert,test-error
