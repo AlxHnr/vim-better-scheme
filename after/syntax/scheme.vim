@@ -29,7 +29,7 @@ if exists('b:is_chicken') || exists('is_chicken')
 	syntax keyword schemeExtSyntax define-values
 	syntax region ChickenC matchgroup=Constant start=/#${/ end=/}/
 
-	" chicken-bundle.
+	" chicken-builder.
 	syntax keyword schemeSyntax function
 	syntax keyword schemeExtSyntax ch-module ch-program ch-test ch-import
 endif
@@ -37,7 +37,7 @@ endif
 syn region schemeStruc matchgroup=Delimiter start="("
 	\	matchgroup=Delimiter end=")" contains=ALL fold
 
-syntax keyword schemeSyntax fold find
+syntax keyword schemeSyntax fold foldr foldl find
 syntax keyword schemeExtSyntax test test-begin test-end test-exit
 syntax keyword schemeExtSyntax test-group test-assert
 
