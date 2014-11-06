@@ -25,6 +25,9 @@ if exists('b:is_chicken') || exists('is_chicken')
 
 	" chicken-builder.
 	setlocal lispwords+=ch-module,ch-test
+
+	" chickup.
+	setlocal lispwords+=typed-record,typed-fun
 endif
 
 setlocal lispwords+=define-values,define-record

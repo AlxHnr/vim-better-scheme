@@ -26,12 +26,14 @@ if exists('b:is_chicken') || exists('is_chicken')
 	syntax keyword schemeExtSyntax define-for-syntax unless when exit
 	syntax keyword schemeExtSyntax er-macro-transformer ir-macro-transformer
 	syntax keyword schemeExtSyntax string-translate string-translate*
-	syntax keyword schemeExtSyntax define-values
+	syntax keyword schemeExtSyntax define-values use-for-syntax
 	syntax region ChickenC matchgroup=Constant start=/#${/ end=/}/
 
 	" chicken-builder.
-	syntax keyword schemeSyntax function
 	syntax keyword schemeExtSyntax ch-module ch-program ch-test ch-import
+
+	" chickup.
+	syntax keyword schemeExtSyntax typed-record typed-fun
 endif
 
 syn region schemeStruc matchgroup=Delimiter start="("
