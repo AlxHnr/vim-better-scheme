@@ -21,23 +21,25 @@
 " }}}
 
 if exists('b:is_chicken') || exists('is_chicken')
-	syntax keyword schemeExtSyntax import export module include use : ->
-	syntax keyword schemeExtSyntax begin-for-syntax define-compiler-syntax
-	syntax keyword schemeExtSyntax define-for-syntax unless when exit
-	syntax keyword schemeExtSyntax er-macro-transformer ir-macro-transformer
-	syntax keyword schemeExtSyntax string-translate string-translate*
-	syntax keyword schemeExtSyntax define-values use-for-syntax
-	syntax region ChickenC matchgroup=Constant start=/#${/ end=/}/
+  syntax keyword schemeExtSyntax import export module include use : ->
+  syntax keyword schemeExtSyntax begin-for-syntax define-compiler-syntax
+  syntax keyword schemeExtSyntax define-for-syntax unless when exit
+  syntax keyword schemeExtSyntax er-macro-transformer ir-macro-transformer
+  syntax keyword schemeExtSyntax string-translate string-translate*
+  syntax keyword schemeExtSyntax define-values import-for-syntax
+  syntax keyword schemeExtSyntax define-values import-for-syntax
+  syntax keyword schemeExtSyntax boolean float fixnum symbol blob
+  syntax region ChickenC matchgroup=Constant start=/#${/ end=/}/
 
-	" chicken-builder.
-	syntax keyword schemeExtSyntax ch-module ch-program ch-test ch-import
+  " chicken-builder.
+  syntax keyword schemeExtSyntax chb-module chb-program chb-test chb-import
 
-	" chickup.
-	syntax keyword schemeExtSyntax typed-record typed-fun
+  " chickup.
+  syntax keyword schemeExtSyntax typed-record typed-fun
 endif
 
 syn region schemeStruc matchgroup=Delimiter start="("
-	\	matchgroup=Delimiter end=")" contains=ALL fold
+  \	matchgroup=Delimiter end=")" contains=ALL fold
 
 syntax keyword schemeSyntax fold foldr foldl find
 syntax keyword schemeExtSyntax test test-begin test-end test-exit

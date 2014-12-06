@@ -21,13 +21,13 @@
 " }}}
 
 if exists('b:is_chicken') || exists('is_chicken')
-	setlocal lispwords+=module,define-compiler-syntax,define-for-syntax
+  setlocal lispwords+=module,define-compiler-syntax,define-for-syntax
 
-	" chicken-builder.
-	setlocal lispwords+=ch-module,ch-test
+  " chicken-builder.
+  setlocal lispwords+=chb-module,chb-test
 
-	" chickup.
-	setlocal lispwords+=typed-record,typed-fun
+  " chickup.
+  setlocal lispwords+=typed-record,typed-fun
 endif
 
 setlocal lispwords+=define-values,define-record
