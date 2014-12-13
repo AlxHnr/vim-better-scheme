@@ -29,6 +29,8 @@ if exists('b:is_chicken') || exists('is_chicken')
   syntax keyword schemeExtSyntax define-values import-for-syntax
   syntax keyword schemeExtSyntax define-values import-for-syntax
   syntax keyword schemeExtSyntax boolean float fixnum symbol blob
+  syntax keyword schemeExtSyntax define-constant with-output-to-port
+  syntax match   schemeExtSyntax '\v(\w|\-)+:'
   syntax region ChickenC matchgroup=Constant start=/#${/ end=/}/
 
   " chicken-builder.

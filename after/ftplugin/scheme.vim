@@ -30,7 +30,8 @@ if exists('b:is_chicken') || exists('is_chicken')
   setlocal lispwords+=typed-record,typed-fun
 endif
 
-setlocal lispwords+=define-values,define-record
+setlocal lispwords+=define-values,define-record,define-constant
 setlocal lispwords+=call-with-input-file,call-with-output-file
 setlocal lispwords+=test,test-group,test-assert,test-error
-setlocal lispwords+=hash-table-for-each,hash-table-walk
+setlocal lispwords+=hash-table-for-each,hash-table-walk,hash-table-map
+setlocal lispwords+=hash-table-fold,with-output-to-port
