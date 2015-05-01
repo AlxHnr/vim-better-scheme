@@ -20,18 +20,5 @@
 "       distribution.
 " }}}
 
-if exists('b:is_chicken') || exists('is_chicken')
-  setlocal lispwords+=module,define-compiler-syntax,define-for-syntax
-
-  " chicken-builder.
-  setlocal lispwords+=chb-module,chb-test
-
-  " chickup.
-  setlocal lispwords+=typed-record,typed-fun
-endif
-
-setlocal lispwords+=define-values,define-record,define-constant,map
-setlocal lispwords+=call-with-input-file,call-with-output-file
-setlocal lispwords+=test,test-group,test-assert,test-error
-setlocal lispwords+=hash-table-for-each,hash-table-walk,hash-table-map
-setlocal lispwords+=hash-table-fold,with-output-to-port
+autocmd BufNewFile,BufRead ~/.csirc,~/.csi_history setlocal filetype=scheme
+autocmd BufNewFile,BufRead *.types,*.import.scm setlocal filetype=lisp
