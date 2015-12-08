@@ -22,6 +22,7 @@
 
 if exists('b:is_chicken') || exists('is_chicken')
   setlocal lispwords+=module,define-compiler-syntax,define-for-syntax
+  setlocal lispwords+=let-location
 
   " chicken-builder.
   setlocal lispwords+=chb-module,chb-test
